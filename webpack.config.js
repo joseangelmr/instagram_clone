@@ -29,27 +29,32 @@ module.exports = {
                 ]
             },
             {
-                test: /\.scss$/,
-                loader: 'style!css!sass?includePaths[]=' + bourbon
+                test: /\.css$/,
+                loader: "style-loader!css-loader"
             },
             {
                 include: [
-                    path.resolve(__dirname, "client/fonts")
+                    path.resolve(__dirname, "./client/fonts")
                 ],
                 test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: "url-loader?limit=10000&minetype=application/font-woff"
             },
             {
                 include: [
-                    path.resolve(__dirname, "client/fonts")
+                    path.resolve(__dirname, "./client/fonts")
                 ],
                 test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: "file-loader"
             },
-
             {
-                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-                loader: 'url-loader?limit=100000'
+                include: [
+                    path.resolve(__dirname, "./client/images")
+                ],
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loaders: [
+                    'file?hash=sha512&digest=hex&name=[hash].[ext]',
+                    'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+                ]
             }
         ]
     },
