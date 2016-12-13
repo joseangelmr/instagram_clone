@@ -2,6 +2,7 @@
 
     connection.init = () => {
         var mongoose = require('mongoose');
+        mongoose.Promise = global.Promise;
         mongoose.connect('mongodb://localhost/instagram');
 
         var db = mongoose.connection;

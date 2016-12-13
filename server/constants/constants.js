@@ -5,7 +5,10 @@ var consts = {
     USER_NOT_FOUND: 'User Not Found',
     USER_PASS_NOT_FOUND: 'User and Password Not Found',
     USER_PASS_FOUND: 'User and Password are correct',
-    USER_FOUND: 'User and Password are correct'
+    USER_FOUND: 'User and Password are correct',
+    SUCCESS_REGISTER: 'Successfully Registered',
+
+    USER_NOT_AVAILABLE: 'User already exists'
 }
 
 exports.consts = consts
