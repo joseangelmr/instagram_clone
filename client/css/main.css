@@ -8,3 +8,37 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+.vertical-center-container {
+    display: table;
+    width:100%;
+    min-height: 100vh;
+}
+.vertical-center-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/*Material*/
+
+.input-field.col label {
+    text-align: left;
+}
+
+.input-field {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
